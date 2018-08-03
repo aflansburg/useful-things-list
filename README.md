@@ -1,32 +1,38 @@
 # Useful things I use
-List of utilities, such as npm packages, that I prefer to use
+List of utilities, such as npm packages, that I enjoy using
 
-## CSV Reading
-#### [Papa Parse](https://www.papaparse.com/) -> [Repo Here](https://github.com/mholt/PapaParse)
+## Node.JS
+---
 
-## CSV Writing
-#### [csv-write-stream](https://github.com/maxogden/csv-write-stream)
+### CSV Reading
+* [Papa Parse](https://www.papaparse.com/) -> [Repo Here](https://github.com/mholt/PapaParse)
 
-## XML Parsing
+### CSV Writing
+* [csv-write-stream](https://github.com/maxogden/csv-write-stream)
 
-### [node-xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
-#### [Simple XML2JSON Parser](https://www.npmjs.com/package/xml2json)
+### XML Parsing
+
+* [node-xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
+* [Simple XML2JSON Parser](https://www.npmjs.com/package/xml2json)
 
 ## XHR
-#### [request/request-promise-native](https://github.com/request/request-promise-native)
+* [request/request-promise-native](https://github.com/request/request-promise-native)
+Which requires:
+    * [request/request](https://github.com/request/request)
 
-which requires: 
+### Throttling
+* [bottleneck](https://github.com/SGrondin/bottleneck#readme)
 
-* [request/request](https://github.com/request/request)
+### Querying SQL DB
+* [node-mssql](https://github.com/tediousjs/node-mssql)
 
-## Throttling
-#### [bottleneck](https://github.com/SGrondin/bottleneck#readme)
+### SOAP client
+* [node-soap](https://github.com/vpulim/node-soap)
 
-## Querying SQL DB
-#### [node-mssql](https://github.com/tediousjs/node-mssql)
+### Dealing with Time
+* [moment.js](https://momentjs.com/)
 
-## SOAP client
-#### [node-soap](https://github.com/vpulim/node-soap)
+### Parsing Command Line Arguments (node.js)
+* [argparse](https://www.npmjs.com/package/argparse)
 
-## Dealing with Time
-#### [moment.js](https://momentjs.com/)
+---
