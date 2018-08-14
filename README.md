@@ -40,7 +40,8 @@ Python Examples
 ---
 ### Reading CSV
 
-```import csv
+```
+import csv
 with open('eggs.csv', newline='') as csvfile:
    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
    for row in spamreader:
@@ -48,7 +49,8 @@ with open('eggs.csv', newline='') as csvfile:
 ```
 
 ### Writing CSV
-```import csv
+```
+import csv
 with open('eggs.csv', 'w', newline='') as csvfile:
    spamwriter = csv.writer(csvfile, delimiter=' ',
                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -77,4 +79,21 @@ with open('names.csv', 'w', newline='') as csvfile:
    writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'})
    writer.writerow({'first_name': 'Lovely', 'last_name': 'Spam'})
    writer.writerow({'first_name': 'Wonderful', 'last_name': 'Spam'})
+```
+
+### Reading CSV + Writing to file + Concatenating values from a single column csv
+```
+import csv
+
+file = open("C:\\Users\\aflansburg\\Downloads\\itemtypeString.txt", "w+")
+typeString = ''
+with open('C:\\Users\\aflansburg\\Downloads\\itemtype.csv') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    for index, r in enumerate(reader):
+        if len(typeString) > 0 and index < len(typeString):
+            typeString += ',' + r[0]
+        else:
+            typeString += r[0]
+
+file.write(typeString)
 ```
