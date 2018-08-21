@@ -7,6 +7,25 @@ List of utilities, such as npm packages, that I enjoy using
 ### CSV Reading
 * [Papa Parse](https://www.papaparse.com/) -> [Repo Here](https://github.com/mholt/PapaParse)
 
+> #### Using Papa Parse
+```
+const fs = require('fs');
+const Papa = require('papaparse');
+const file = './data/input/all_superseded.csv';
+
+// config for papaparse
+const config = {
+    header: true,
+    encoding: 'utf8',
+    delimiter: ',',
+}
+
+// read the csv file
+const csvData = fs.readFileSync(file, 'utf8');
+
+// parse the file object and filter on a specific prop
+let data = Papa.parse(csvData, config).data.filter(d=>d.MPN !== '')
+```
 ### CSV Writing
 * [csv-write-stream](https://github.com/maxogden/csv-write-stream)
 
