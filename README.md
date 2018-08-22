@@ -54,6 +54,8 @@ Which requires:
 ### Parsing Command Line Arguments (node.js)
 * [argparse](https://www.npmjs.com/package/argparse)
 
+### Async Utilities (non-Vanilla)
+* [async](https://caolan.github.io/async/)
 ---
 Python Examples
 ---
