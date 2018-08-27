@@ -118,3 +118,16 @@ with open('C:\\Users\\aflansburg\\Downloads\\itemtype.csv') as csvfile:
 
 file.write(typeString)
 ```
+---
+## Generally Useful Code Snippets
+---
+### Javascript (Vanilla)
+> Adding an array of integers stored as strings using reduce
+```
+function intReduce(numArr){
+  return numArr.reduce((a, s) => 
+    !isNaN(Number.parseInt(s)) 
+      ? Number.parseInt(s) + Number.parseInt(a) 
+      : Number.parseInt(a))
+}
+```
