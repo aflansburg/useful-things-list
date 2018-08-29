@@ -136,12 +136,12 @@ function intReduce(numArr){
 > >This can help with issues such as apostrophes and other special characters being funky-encoded by Excel
 ```
 const prependData = fs.readFileSync(out_file);
-            const pfd = fs.openSync(out_file, 'w+');
-            const insert = new Buffer('\uFEFF');
-            fs.writeSync(pfd, insert, 0, insert.length, 0);
-            fs.writeSync(pfd, prependData, 0, prependData.length, insert.length);
-            fs.close(pfd, (err) => {
-                if (err) throw err;
-            });
+const pfd = fs.openSync(out_file, 'w+');
+const insert = new Buffer('\uFEFF');
+fs.writeSync(pfd, insert, 0, insert.length, 0);
+fs.writeSync(pfd, prependData, 0, prependData.length, insert.length);
+fs.close(pfd, (err) => {
+    if (err) throw err;
+});
 
 ```
